@@ -1,0 +1,85 @@
+    /* TODO(you): Write the CSS to finish the assignment! */
+    
+    .choice-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+     
+    }
+    
+    [data-question-id="one"],
+    [data-question-id="two"],
+    [data-question-id="three"] {
+        background-color: #f4f4f4;
+        border: 1px solid #dcdcdc;
+       margin-top: 10px;
+       margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        flex-basis: 32.5%;
+    }
+    [data-question-id="one"].active,
+    [data-question-id="two"].active,
+    [data-question-id="three"].active {
+        background-color: #cfe3ff;
+    }
+    
+    [data-question-id="one"].unactive,
+    [data-question-id="two"].unactive,
+    [data-question-id="three"].unactive {
+        opacity: 0.6;
+    }
+    
+    img {
+        width: 100%;
+        display: block;
+    }
+    
+    .checkbox {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .father {
+        margin: 40px auto 18px;
+        padding: 20px;
+        width: 647px;
+        justify-content: center;
+        border: 1px solid #f4f4f4;
+    }
+    
+    .children-one {
+        margin-bottom: 18px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .children-two {
+        margin-bottom: 18px;
+    }
+    
+    .children-three {
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-weight: bold;
+        background-color: #cecece;
+    }
+    .children-three:hover {
+        background-color: #e0e0e0;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 700px) {
+        body {width: 100%;}
+        body article {width: 95%;}
+    }
+    @media screen and (max-width: 500px) {
+       [data-question-id="one"],
+       [data-question-id="two"],
+       [data-question-id="three"] {
+        flex-basis: 49%;
+       }
+    }
